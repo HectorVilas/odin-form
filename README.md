@@ -3,8 +3,8 @@
 <table>
 <thead>
 <tr>
-<th><h2>English</h2><th>
-<th><h2>Español</h2><th>
+<th><h2>English</h2></th>
+<th><h2>Español</h2></th>
 </tr>
 </thead>
 <tbody>
