@@ -3,21 +3,21 @@
 <table>
 <thead>
 <tr>
-<td><h2>English</h2><td>
-<td><h2>Español</h2><td>
+<th><h2>English</h2><th>
+<th><h2>Español</h2><th>
 </tr>
 </thead>
-</tbody>
+<tbody>
 <tr>
 <td style="vertical-align: top;"><p>Welcome to the project. This time I'm not doing anything special, just some forms practice from <a href="https://www.theodinproject.com/">The Odin Project</a>.</p>
 
 <p>As english is not my native language, from now on I'm going to write everything in english and spanish. I just need to find a way to make it easy to read here in the README.md.</p>
-<p>Click in the bottom elements to open or collapse the progress updates in english or spanish (english open by default)</p><td>
+<p>Click in the bottom elements to open or collapse the progress updates in english or spanish (english open by default)</p></td>
 
 <td style="vertical-align: top;"><p>Bienvenido al proyecto. Esta vez no voy a hacer nada especial, sólo una práctica de form de <a href="https://www.theodinproject.com/">The Odin Project</a>.</p>
 
 <p>Ya que el inglés no es mi lenguaje nativo, a partir de ahora voy a empezar a escribir todo en inglés y español. Solo tengo que encontrar la forma de hacerlo fácil de leer en el README.md.</p>
-<p>Haga click en los elementos de abajo para abrir o colapsar la actualización del progreso en inglés o español (inglés abierto pro defecto)</p><td>
+<p>Haga click en los elementos de abajo para abrir o colapsar la actualización del progreso en inglés o español (inglés abierto pro defecto)</p></td>
 </tr>
 </tbody>
 </table>
