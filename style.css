@@ -1,54 +1,102 @@
+@font-face {
+  font-family: Norse-Bold;
+  src: url(./media/fonts/Norse-Bold.otf);
+}
+
 body {
   display: flex;
   height: 100vh;
   width: 100vw;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .main {
   display: flex;
   flex: auto;
-  /* overflow: hidden; */
 }
 
 /* - - - login / sign up - - - */
 
-.options {
+.login-signup {
   display: flex;
+  justify-content: center;
   position: absolute;
   flex: auto;
   z-index: 1;
   height: 100vh;
 }
 
+/* logo */
+.bg-logo {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-top: 5rem;
+  height: 20vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .50);
+}
+.logo-and-text {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.logo-and-text > p {
+  color: #bbb;
+  font-family: 'Norse-Bold', 'Courier New', Courier, monospace;
+  font-size: 8rem;
+}
+.logo-and-text > img {
+  position: sticky;
+  height: 10rem;
+  width: auto;
+}
+
+/* each side */
 .bg-login,
-.bg-register {
+.bg-signup {
+  display: flex;
+  justify-content: center;
   flex: 1 1 auto;
   width: 50vw;
-}
-.bg-login {
   transition: all 1s;
+} .bg-login {
   background-image: url(./media/images/backgrounds/gioele-fazzeri-dj_DVO6OeZA-unsplash.jpg);
   background-size: cover;
-  background-position: left;
-  box-shadow: inset -2em 0 3em black;
-}
-.bg-register {
-  transition: 1s;
+  background-position: right;
+  box-shadow: inset -2rem 0 3rem black;
+} .bg-signup {
   background-image: url(./media/images/backgrounds/gioele-fazzeri-5ii9f7pMk40-unsplash.jpg);
   background-size: cover;
-  background-position: right;
-  box-shadow: inset 2em 0 3em black;
+  background-position: left;
+  box-shadow: inset 2rem 0 3rem black;
+}
+
+/* buttons */
+.login-signup button {
+  padding: 1rem 4rem;
+  font-size: 2em;
+  color: #bbb;
+  margin-top: auto;
+  margin-bottom: 10rem;
+  background-color: #444;
+  border: .25rem solid #777;
+  border-radius: 3rem;
+}.login-signup button:hover {
+  background-color: #555;
 }
 
 
 
+/* - - - forms - - - */
+
 .login,
-.register {
+.signup {
   flex: 1 1 auto;
   position: relative;
-  width: 50vw;
+  /* width: 50vw; */
   background-color: #111;
 }
 
