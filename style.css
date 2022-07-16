@@ -46,20 +46,17 @@ body {
 .logo-and-text > p {
   color: #bbb;
   font-family: 'Norse-Bold', 'Courier New', Courier, monospace;
-  font-size: 8rem;
+  font-size: 7rem;
 }
 .logo-and-text > img {
   position: sticky;
-  height: 10rem;
+  height: 8rem;
   width: auto;
 }
 
 /* each side */
 .bg-login,
 .bg-signup {
-  display: flex;
-  justify-content: center;
-  flex: 1 1 auto;
   width: 50vw;
   transition: all 1s;
 } .bg-login {
@@ -73,27 +70,40 @@ body {
   background-position: left;
   box-shadow: inset 2rem 0 3rem black;
 }
+/*hiding side*/
+.hide-side {
+  width: 0;
+}
 
 /* buttons */
-.login-signup button {
+.buttons {
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  gap: 10rem;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  margin-bottom: 10rem;
+}
+
+.buttons button {
+  /* flex: 0 0 auto; */
   padding: 1rem 4rem;
   font-size: 2em;
   color: #bbb;
-  margin-top: auto;
-  margin-bottom: 10rem;
   background-color: #444;
   border: .25rem solid #777;
   border-radius: 3rem;
-}.login-signup button:hover {
+}.buttons button:hover {
   background-color: #555;
 }
 
 
-
 /* - - - forms - - - */
 
-.login,
-.signup {
+.login-menu,
+.signup-menu {
   flex: 1 1 auto;
   position: relative;
   /* width: 50vw; */
