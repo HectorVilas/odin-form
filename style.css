@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex: auto;
+  /* overflow: hidden; */
+}
+
+.bg-login,
+.bg-register {
+  flex: 1 1 auto;
+  width: 40vw;
+}
+.bg-login {
+  background-image: url(./media/images/backgrounds/gioele-fazzeri-dj_DVO6OeZA-unsplash.jpg);
+  background-size: cover;
+  box-shadow: inset -3em 0 3em black;
+}
+.bg-register {
+  background-image: url(./media/images/backgrounds/gioele-fazzeri-5ii9f7pMk40-unsplash.jpg);
+  background-size: cover;
+  box-shadow: inset 3em 0 3em black;
+}
+.bg-middle {
+  flex: 1 1 auto;
+  width: 100vw;
+  /* background-image: url(./media/images/backgrounds/possessed-photography-_E1PQXKUkMw-unsplash.jpg);
+  background-size: cover; */
+  background-color: black;
+
+}
+
+.login,
+.register {
+  flex: 1 1 auto;
+  width: 60vw;
+  background-color: #111;
+}
+
+
+
+/*for testing*/
+
+** {
+  outline: 1px solid gray;
+}
