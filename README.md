@@ -1,5 +1,7 @@
 # odin-form
 
+# https://hectorvilas.github.io/odin-form/
+
 <table>
 <thead>
 <tr>
@@ -32,6 +34,11 @@
 
 <h2>Actualización 1</h2>
 <p>Ahora que sé cómo quiero que se vea la página, he descargado unas pocas imágene para que la misma se vea interesante. Luego de eso dediqué demasiado tiempo experimentando con el README.md para mostrar ámbos idiomas. Usé un poco de HTML básico para eso, no sabía que era posible en este tipo de archivos.</p>
+
+<h2>Actualización 2</h2>
+<p>Intenté hacer lo que tenía en mente, pero fallé completamente. Mientras pensaba en el proyecto al hacer otras cosas, se me ocurrió una mejor forma de hacer lo que quería lograr, y ahora funciona.</p>
+<p>Cuando el usuario hace click en sign up o login, los botones se ocultarán y las imágenes se moverán hacia la derecha o izquierda, revelando el formulario apropiado. Por ahora no hay formularios.</p>
+<p>Para hacerlo un poco más interesante, las imágenes en la página aparecerán borrosas y luego se enfocarán, y los botones aparecerán por debajo.</p>
 </details>
 
 <!--------------------------->
@@ -44,5 +51,10 @@
 
 <h2>Update 1</h2>
 <p>Now that I know how I want the page to look, I downloaded a few images so the page can look interesting. After that I spent too much time experimenting with the the README.md to show both languages. I used some basic HTML for it, I didn't know it was possible in this kind of files.</p>
-</details>
 
+<h2>Update 2</h2>
+<p>I tried to make what I had in mind, but I failed completely. After thinking while doing something else, I came with a better approach for what I wanted to do, and it works now.</p>
+<p>When the user clicks on sign up or login, the buttons will hide and the images will move to left or right, revealing the appropiate form. There's no forms for now.</p>
+<p>To make it a little more interesting, the images in the page will appear blurred and then unblur on load, and the buttons will reveal from the bottom.</p>
+
+</details>
