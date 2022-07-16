@@ -26,11 +26,13 @@ body {
   flex: auto;
   z-index: 1;
   height: 100vh;
+  background-color: black;
 }
 
 /* logo */
 .bg-logo {
   display: flex;
+  z-index: 2;
   justify-content: center;
   position: absolute;
   margin-top: 5rem;
@@ -42,6 +44,7 @@ body {
   display: flex;
   gap: 2rem;
   align-items: center;
+  animation: reveal 1s;
 }
 .logo-and-text > p {
   color: #bbb;
@@ -58,7 +61,8 @@ body {
 .bg-login,
 .bg-signup {
   width: 50vw;
-  transition: all 1s;
+  transition: all ease-in-out 2s;
+  animation: reveal 2s;
 } .bg-login {
   background-image: url(./media/images/backgrounds/gioele-fazzeri-dj_DVO6OeZA-unsplash.jpg);
   background-size: cover;
@@ -83,10 +87,10 @@ body {
   transition: 1s;
   gap: 10rem;
   bottom: 0;
-  z-index: 10;
+  z-index: 2;
   width: 100%;
   margin-bottom: 10rem;
-  animation: raise 1s;
+  animation: raise 2s;
 }
 
 .buttons button {
@@ -100,15 +104,7 @@ body {
   background-color: #555;
 }
 
-@keyframes raise {
-  from {
-    margin-bottom: 0rem;
-    opacity: 0;
-  }
-  to {
-    margin-bottom: 10rem;
-  }
-}
+
 
 /* - - - forms - - - */
 
@@ -118,6 +114,33 @@ body {
   position: relative;
   /* width: 50vw; */
   background-color: #111;
+}
+
+
+
+/* - - - keyframes - - - */
+
+@keyframes raise {
+  from {
+    margin-bottom: 0rem;
+    opacity: 0;
+    filter: blur(2rem);
+  }
+  50% {
+    filter: blur(0);
+  }
+  to {
+    margin-bottom: 10rem;
+  }
+}
+
+@keyframes reveal {
+  from {
+    filter: blur(2rem);
+  }
+  to {
+    filter: blur(0);
+  }
 }
 
 
