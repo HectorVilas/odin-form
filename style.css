@@ -12,34 +12,43 @@ body {
   /* overflow: hidden; */
 }
 
+/* - - - login / sign up - - - */
+
+.options {
+  display: flex;
+  position: absolute;
+  flex: auto;
+  z-index: 1;
+  height: 100vh;
+}
+
 .bg-login,
 .bg-register {
   flex: 1 1 auto;
-  width: 40vw;
+  width: 50vw;
 }
 .bg-login {
+  transition: all 1s;
   background-image: url(./media/images/backgrounds/gioele-fazzeri-dj_DVO6OeZA-unsplash.jpg);
   background-size: cover;
-  box-shadow: inset -3em 0 3em black;
+  background-position: left;
+  box-shadow: inset -2em 0 3em black;
 }
 .bg-register {
+  transition: 1s;
   background-image: url(./media/images/backgrounds/gioele-fazzeri-5ii9f7pMk40-unsplash.jpg);
   background-size: cover;
-  box-shadow: inset 3em 0 3em black;
+  background-position: right;
+  box-shadow: inset 2em 0 3em black;
 }
-.bg-middle {
-  flex: 1 1 auto;
-  width: 100vw;
-  /* background-image: url(./media/images/backgrounds/possessed-photography-_E1PQXKUkMw-unsplash.jpg);
-  background-size: cover; */
-  background-color: black;
 
-}
+
 
 .login,
 .register {
   flex: 1 1 auto;
-  width: 60vw;
+  position: relative;
+  width: 50vw;
   background-color: #111;
 }
 
