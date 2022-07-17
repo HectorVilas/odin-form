@@ -115,8 +115,7 @@ body {
 .login {
   background-color: transparent;
   border: none;
-  text-decoration: underline;
-  text-decoration-color: #666;
+  text-decoration: underline #666;
 }.login:hover,
 .login:focus {
   color: white;
@@ -138,6 +137,26 @@ body {
   box-shadow: 0 0 2rem white;
 }
 
+/*credits*/
+.bg-credits {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(100, 100, 100, .50);
+  margin-bottom: 1rem;
+}.bg-credits p {
+  color: #bbb;
+  text-align: center;
+  vertical-align: middle;
+  margin: .3rem;
+  font-family: 'Norse-Bold', 'Courier New', Courier, monospace;
+}.bg-credits a:visited {
+  color: #888;
+  text-decoration: underline #555;
+}.bg-credits a:link {
+  color: #888;
+}
 
 
 /* - - - forms - - - */
