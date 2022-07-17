@@ -60,7 +60,7 @@ body {
   font-size: 6rem;
 }
 .logo-and-text > img {
-  position: sticky;
+  /* position: sticky; */
   height: 7rem;
   width: auto;
 }
@@ -104,15 +104,38 @@ body {
   animation: raise 2s;
 }
 
-.buttons button {
+.login,
+.signup {
   padding: 1rem 4rem;
   font-size: 2em;
   color: #bbb;
-  background-color: #444;
-  border: .25rem solid #777;
+  transition: all ease-in-out 100ms;
   border-radius: 3rem;
-}.buttons button:hover {
-  background-color: #555;
+}
+.login {
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  text-decoration-color: #666;
+}.login:hover,
+.login:focus {
+  color: white;
+  text-decoration-color: #333;
+}.login:active {
+  text-shadow: 0 0 3rem white;
+}
+.signup {
+  background-color: rgb(37, 70, 22);
+  border: .25rem solid rgb(47, 49, 30);
+}.signup:hover,
+.signup:focus {
+  background-color: rgb(49, 87, 34);
+  border-color: rgb(102, 88, 57);
+  box-shadow: 0 0 1rem black;
+}.signup:active {
+  background-color: rgb(70, 105, 41);
+  border-color: rgb(129, 110, 70);
+  box-shadow: 0 0 2rem white;
 }
 
 
@@ -122,9 +145,13 @@ body {
 .menu-login,
 .menu-signup {
   flex: 1 1 auto;
-  position: relative;
-  /* width: 50vw; */
+  position: absolute;
+  width: 70vw;
+  height: 100vh;
   background-color: #111;
+}
+.menu-signup {
+  right: 0;
 }
 
 
