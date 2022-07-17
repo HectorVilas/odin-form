@@ -15,6 +15,13 @@ body {
 .main {
   display: flex;
   flex: auto;
+  flex-direction: column;
+}
+
+/* - - - general use - - - */
+
+.hidden {
+  display: none;
 }
 
 /* - - - login / sign up - - - */
@@ -32,28 +39,29 @@ body {
 /* logo */
 .bg-logo {
   display: flex;
+  flex: auto;
   z-index: 2;
   justify-content: center;
   position: absolute;
   margin-top: 5rem;
-  height: 20vh;
+  height: 8rem;
   width: 100%;
   background-color: rgba(0, 0, 0, .50);
 }
 .logo-and-text {
   display: flex;
-  gap: 2rem;
+  gap: .5rem;
   align-items: center;
   animation: reveal 1s;
 }
 .logo-and-text > p {
   color: #bbb;
   font-family: 'Norse-Bold', 'Courier New', Courier, monospace;
-  font-size: 7rem;
+  font-size: 6rem;
 }
 .logo-and-text > img {
   position: sticky;
-  height: 8rem;
+  height: 7rem;
   width: auto;
 }
 
@@ -66,17 +74,20 @@ body {
 } .bg-login {
   background-image: url(./media/images/backgrounds/gioele-fazzeri-dj_DVO6OeZA-unsplash.jpg);
   background-size: cover;
-  background-position: right;
+  background-position: left;
   box-shadow: inset -2rem 0 3rem black;
 } .bg-signup {
   background-image: url(./media/images/backgrounds/gioele-fazzeri-5ii9f7pMk40-unsplash.jpg);
   background-size: cover;
-  background-position: left;
+  background-position: right;
   box-shadow: inset 2rem 0 3rem black;
 }
 /*hiding side*/
 .hide-side {
   width: 0;
+}
+.smaller-side {
+  width: 30vw;
 }
 
 /* buttons */
@@ -108,8 +119,8 @@ body {
 
 /* - - - forms - - - */
 
-.login-menu,
-.signup-menu {
+.menu-login,
+.menu-signup {
   flex: 1 1 auto;
   position: relative;
   /* width: 50vw; */
