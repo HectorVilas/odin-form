@@ -143,7 +143,7 @@ body {
   z-index: 1;
   bottom: 0;
   width: 100%;
-  background-color: rgba(100, 100, 100, .50);
+  background-color: rgba(0, 0, 0, .50);
   margin-bottom: 1rem;
 }.bg-credits p {
   color: #bbb;
