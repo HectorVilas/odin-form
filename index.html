@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="main">
-    <div class="menu-login hidden">
+    <div class="form menu-login hidden">
 
     </div>
     <!-- -->
@@ -36,10 +36,54 @@
       <div class="bg-login"></div>
       <div class="bg-signup"></div>
     </div>
-    <!-- -->
-    <div class="menu-signup hidden">
 
+    <!-- -->
+
+    <div class="form menu-signup hidden">
+      <p>This is not a real service! You know you need something like
+        this in your life to help you realize your deepest dreams.
+        Sign up <span>now</span> to get started.</p>
+      <p>You <span>know</span> you want to.</p>
+      
+      <form action="http://httpbin.org/post" method="post">
+        <p>Let's do this!</p>
+
+        <ul>
+          <li>
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first_name" required>
+            <span>temporal message</span>
+          </li>
+          <li>
+            <label for="last-name">Last name</label>
+            <input type="text" name="last_name" id="last-name" required>
+            <span>temporal message</span>
+          </li>
+          <li>
+            <label for="e-mail">E-mail</label>
+            <input type="text" name="email" id="e-mail" required>
+            <span>temporal message</span>
+          </li>
+          <li>
+            <label for="phone">Phone number</label>
+            <input type="tel" name="phone" id="phone" required>
+            <span>temporal message</span>
+          </li>
+          <li>
+            <label for="password">Password</label>
+            <input type="password" name="pass" id="password" required>
+            <span>temporal message</span>
+          </li>
+          <li>
+            <label for="repeat-pass">Confirm password</label>
+            <input type="password" id="repeat-pass" required>
+            <span>temporal message</span>
+          </li>
+        </ul>
+        <button type="submit">Create account</button>
+      </form>
     </div>
+
     <!--login and sign up buttons-->
     <div class="buttons">
       <button class="login">Log in</button>
