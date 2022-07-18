@@ -171,9 +171,14 @@ body {
   width: var(--form-width);
   height: 100vh;
   background-color: #111;
+  overflow-y: auto;
 }
 .menu-signup {
   right: 0;
+}
+.bg-form-color {
+  background-color: #333;
+  padding-bottom: 1em;
 }
 
 /* text */
@@ -187,15 +192,21 @@ body {
   margin: 1rem var(--form-padding);
 } .form > p span {
   font-style: italic;
+} .form > p:last-of-type {
+  padding-bottom: 2em;
 }
 
-form {
-  padding: .1rem var(--form-padding);
-  color: #ccc;
-  background-color: #333;
-}
 form p {
+  padding: .1rem var(--form-padding);
   margin-left: 0;
+}
+
+/*width*/
+form {
+  max-width: 1000px;
+}
+.form > p {
+  max-width: calc(1000px - var(--form-padding) * 2);
 }
 
 /* fields */
@@ -204,15 +215,36 @@ ul {
   flex-flow: row wrap;
   list-style: none;
   padding: 0;
+  padding: .1rem var(--form-padding);
+  color: #ccc;
 }
-
 li {
   display: flex;
   flex-direction: column;
   flex: 0 1 auto;
   width: calc(50% - var(--form-padding-li) );
+  max-width: 300px;
+  height: 5rem;
   padding: var(--form-padding-li);
   padding-left: 0;
+}
+label,
+input,
+input + span {
+  font-size: 1.25em;
+}
+input::placeholder {
+  font-size: .9em;
+  color: #777;
+}
+
+input + span {
+  background-color: #444;
+  border-radius: 0 0 .25em .25em;
+  padding: .5em;
+}
+input + span::after {
+  content: "temporal error message";
 }
 
 
