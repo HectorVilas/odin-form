@@ -261,6 +261,33 @@ input:placeholder-shown {
   background-image: none;
 }
 
+input[type="text"]:invalid + span::after {
+  display: block;
+  content: "Name is too short.";
+}
+input[type="text"]:valid + span::after,
+input[type="text"]:placeholder-shown + span::after {
+  content: none;
+}
+
+input[type="email"]:invalid + span::after {
+  display: block;
+  content: "Wrong format.";
+}
+input[type="email"]:valid + span::after,
+input[type="email"]:placeholder-shown + span::after {
+  content: none;
+}
+
+input[type="tel"]:invalid + span::after {
+  display: block;
+  content: "At least 8 numbers";
+}
+input[type="tel"]:valid + span::after,
+input[type="tel"]:placeholder-shown + span::after {
+  content: none;
+}
+
 
 /* - - - general use - - - */
 
