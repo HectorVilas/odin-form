@@ -46,6 +46,14 @@
 <p>En fin, acá dejo un GIF mostrando el progreso:</p>
 <img src="./READMEmd/progress01.gif">
 
+<h2>Update 4</h2>
+<p>El formulario al fin progresa. Me costó encontrar la forma de lograr lo que tenía en mente. Los inputs ahora tienen placeholders, los estilicé un poco y luego me encontré con un problema: ¿cómo puedo hacer que el formulario muestre mensajes de error? Luego de testear un montón, finalmente encontré una forma de mostrar mensajes de error una vez que el usuario deja el input. De esta forma el usuario no será molestado con mensajes de error mientras escribe o incluso antes de empezarlos. Cuando el usuario deja un input (clickea fuera o presiona tab), el espacio cambiará a un "modo agresivo", comprobando lo ingresado mientras es escrito, para hacer más fácil encontrar y arreglar errores.</p>
+<p>Acá hay un GIF mostrando esto:</p>
+<img src="./READMEmd/progress02.gif">
+<p>También añadí un texto para los campos vacíos:</p>
+<img src="./READMEmd/progress03.gif">
+<p>Aún hay mucho trabajo por hacer. El formulario está muy lejos de estar terminado.</p>
+
 <h2></h2>
 <p></p>
 
@@ -75,6 +83,14 @@
 <p>Anyways, here's a little GIF showing the progress:</p>
 <img src="./READMEmd/progress01.gif">
 
+
+<h2>Update 4</h2>
+<p>The form is finally progressing. I had a hard time trying to figure how to achieve what I wanted to do. The inputs now have placeholders, I styled it a little and then I had a problem: how can I make the form show error messages? After a lot of testing, I finally found a way to show error messages once the user leaves the input field. This way the user won't get annoyed seeing error messages while typing or even before starting with them. Once the user leaves an input (click away or tab), the field will change to an "agressive mode", checking the inputs while these are being typed, to make it easier to the user to fix any mistakes.</p>
+<p>Here's a GIF showing it:</p>
+<img src="./READMEmd/progress02.gif">
+<p>I also added a little text to empty fields:</p>
+<img src="./READMEmd/progress03.gif">
+<p>There's still a LOT of work to do. This form is way far from finished.</p>
 
 <h2></h2>
 <p></p>
