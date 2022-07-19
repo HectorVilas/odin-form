@@ -266,11 +266,11 @@ input:focus {
   border-bottom: 4px solid #777;
   outline: none;
 }
-input:valid {
+input.visited:valid {
   border-bottom: 4px solid green;
   background-image: url(./media/images/input-status/good.png);
 }
-input:invalid {
+input.visited:invalid {
   border-bottom: 4px solid orangered;
   background-image: url(./media/images/input-status/bad.png);
 }
@@ -278,32 +278,32 @@ input:placeholder-shown {
   border-bottom: 4px solid #555;
   background-image: none;
 }
-
-input[type="text"]:invalid + span::after {
-  display: block;
-  content: "Name is too short.";
+input.visited:placeholder-shown {
+  border-bottom: 4px solid yellow;
+  background-image: url(./media/images/input-status/undefined.png);
 }
-input[type="text"]:valid + span::after,
-input[type="text"]:placeholder-shown + span::after {
-  content: none;
+input.visited:placeholder-shown + span::after {
+  content: "This field is required.";
 }
 
-input[type="email"]:invalid + span::after {
-  display: block;
+input[type="email"].visited:invalid + span::after {
   content: "Wrong format.";
 }
-input[type="email"]:valid + span::after,
-input[type="email"]:placeholder-shown + span::after {
+input[type="email"].visited:valid + span::after {
   content: none;
+}
+input[type="email"].visited:placeholder-shown + span::after {
+  content: "This field is required."
 }
 
-input[type="tel"]:invalid + span::after {
-  display: block;
+input[type="tel"].visited:invalid + span::after {
   content: "At least 8 numbers";
 }
-input[type="tel"]:valid + span::after,
-input[type="tel"]:placeholder-shown + span::after {
+input[type="tel"].visited:valid + span::after{
   content: none;
+}
+input[type="tel"].visited:placeholder-shown + span::after {
+  content: "This field is required."
 }
 
 
