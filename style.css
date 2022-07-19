@@ -2,7 +2,14 @@
   --form-width: 70vw;
   --form-padding: 3rem;
   --form-padding-li: 1rem;
+  --font-1-norse: 'Norse-Bold', 'Courier New', Courier, monospace;
+  /* --font-2: Arial, Helvetica, sans-serif; */
+  --font-2: 'Times New Roman', Times, serif;
   --img-width: calc(100vw - var(--form-width));
+  --text-color-1: #bbb;
+  --text-color-2: #999;
+  --text-color-3: #777;
+  --text-color-4: #666;
 }
 
 @font-face {
@@ -59,8 +66,8 @@ body {
   animation: reveal 1s;
 }
 .logo-and-text > p {
-  color: #bbb;
-  font-family: 'Norse-Bold', 'Courier New', Courier, monospace;
+  color: var(--text-color-1);
+  font-family: var(--font-1-norse);
   font-size: 6rem;
 }
 .logo-and-text > img {
@@ -112,7 +119,7 @@ body {
 .signup {
   padding: 1rem 4rem;
   font-size: 2em;
-  color: #bbb;
+  color: var(--text-color-1);
   transition: all ease-in-out 100ms;
   border-radius: 3rem;
 }
@@ -150,16 +157,16 @@ body {
   background-color: rgba(0, 0, 0, .50);
   margin-bottom: 1rem;
 }.bg-credits p {
-  color: #bbb;
+  color: var(--text-color-1);
   text-align: center;
   vertical-align: middle;
   margin: .3rem;
-  font-family: 'Norse-Bold', 'Courier New', Courier, monospace;
+  font-family: var(--font-1-norse);
 }.bg-credits a:visited {
-  color: #888;
+  color: var(--text-color-2);
   text-decoration: underline #555;
 }.bg-credits a:link {
-  color: #888;
+  color: var(--text-color-3);
 }
 
 
@@ -183,8 +190,8 @@ body {
 
 /* text */
 .form p {
-  color: #bbb;
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color-1);
+  font-family: var(--font-2);
   font-weight: 800;
   font-size: 1.5em;
 }
@@ -216,7 +223,7 @@ ul {
   list-style: none;
   padding: 0;
   padding: .1rem var(--form-padding);
-  color: #ccc;
+  color: var(--text-color-1);
 }
 li {
   display: flex;
@@ -232,10 +239,11 @@ label,
 input,
 input + span {
   font-size: 1.25em;
+  font-family: var(--font-2);
 }
 input::placeholder {
   font-size: .9em;
-  color: #777;
+  color: var(--text-color-4);
 }
 
 /* status cues */
@@ -247,17 +255,27 @@ input {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
+  background-color: #444;
+  border: none;
+  border-bottom: 5px solid #555;
+  color: var(--text-color-1);
+  font-family: var(--font-2);
+}
+input:focus {
+  background-color: #555;
+  border-bottom: 4px solid #777;
+  outline: none;
 }
 input:valid {
-  outline: 2px solid green;
+  border-bottom: 4px solid green;
   background-image: url(./media/images/input-status/good.png);
 }
 input:invalid {
-  outline: 2px solid orangered;
+  border-bottom: 4px solid orangered;
   background-image: url(./media/images/input-status/bad.png);
 }
 input:placeholder-shown {
-  outline: none;
+  border-bottom: 4px solid #555;
   background-image: none;
 }
 
