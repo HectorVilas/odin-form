@@ -12,6 +12,29 @@
 <body>
   <div class="main">
     <div class="form menu-login hidden">
+      <p>This is not a real service!</p>
+      <p>Continue the fight <span>now</span>!</p>
+      
+      <form action="http://httpbin.org/post" method="post">
+        <div class="bg-form-color">
+          <ul>
+            <li>
+            <label for="e-mail">E-mail</label>
+              <input type="email" name="email" id="e-mail"
+              placeholder="username@example.com" required>
+              <span></span>
+            </li>
+            <li>
+              <label for="password">Password</label>
+                <input type="password" name="pass" id="password" minlength="8"
+                placeholder="••••••••" required>
+              <span></span>
+            </li>
+          </ul>
+        </div>
+        <button class="signup" type="submit">Log in</button>
+      </form>
+      <p>Need an account? <a class="swap-side" href="#">Sign up</a></p>
 
     </div>
     <!-- -->
@@ -87,8 +110,9 @@
             </li>
           </ul>
         </div>
-        <button type="submit">Create account</button>
+        <button class="signup" type="submit">Sign up</button>
       </form>
+      <p>Already have an account? <a class="swap-side" href="#">Log in</a></p>
     </div>
 
     <!--login and sign up buttons-->
