@@ -1,7 +1,10 @@
 :root {
-  --form-width: 70vw;
+  --form-width: 50vw;
   --form-padding: 3rem;
   --form-padding-li: 1rem;
+  --transition: 2s;
+  --logo-size: 9rem;
+  --logo-text: 8rem;
   --font-1-norse: 'Norse-Bold', 'Courier New', Courier, monospace;
   /* --font-2: Arial, Helvetica, sans-serif; */
   --font-2: 'Times New Roman', Times, serif;
@@ -68,11 +71,11 @@ body {
 .logo-and-text > p {
   color: var(--text-color-1);
   font-family: var(--font-1-norse);
-  font-size: 6rem;
+  font-size: var(--logo-text);
 }
 .logo-and-text > img {
   /* position: sticky; */
-  height: 7rem;
+  height: var(--logo-size);
   width: auto;
 }
 
@@ -80,8 +83,8 @@ body {
 .bg-login,
 .bg-signup {
   width: 50vw;
-  transition: all ease-in-out 2s;
-  animation: reveal 2s;
+  transition: all ease-in-out var(--transition);
+  animation: reveal var(--transition);
 } .bg-login {
   background-image: url(./media/images/backgrounds/gioele-fazzeri-dj_DVO6OeZA-unsplash.jpg);
   background-size: cover;
@@ -112,7 +115,7 @@ body {
   z-index: 2;
   width: 100%;
   margin-bottom: 10rem;
-  animation: raise 2s;
+  animation: raise var(--transition);
 }
 
 .login,
@@ -199,13 +202,31 @@ body {
   margin: 1rem var(--form-padding);
 } .form > p span {
   font-style: italic;
-} .form > p:last-of-type {
-  padding-bottom: 2em;
+} .form > p:nth-of-type(1n+2) {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+.form > p:last-of-type {
+  font-size: 1.25em;
 }
 
 form p {
   padding: .1rem var(--form-padding);
   margin-left: 0;
+}
+
+form button.signup {
+  padding: .5rem 2rem;
+  border-radius: 10% / 50%;
+  margin: 2rem var(--form-padding);
+  font-size: 1.5em;
+}
+
+.form a:visited {
+  color: var(--text-color-2);
+  text-decoration: underline #555;
+}.form a:link {
+  color: var(--text-color-3);
 }
 
 /*width*/
@@ -337,6 +358,54 @@ input[type="tel"].visited:placeholder-shown + span::after {
   }
 }
 
+
+/* media query */
+
+@media screen and (max-width: 1600px){
+  :root {
+    --form-width: 60vw;
+    --logo-size: 6rem;
+    --logo-text: 5rem;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  :root {
+    --form-width: 70vw;
+    --logo-size: 5rem;
+    --logo-text: 4rem;
+  }
+}
+
+@media screen and (max-width: 900px){
+  :root {
+    --form-width: 80vw;
+    --logo-size: 4rem;
+    --logo-text: 3rem;
+  }
+  .login,
+  .signup {
+    font-size: 1.25em;
+  }
+  .bg-credits {
+    font-size: .75em;
+  }
+}
+
+@media screen and (max-width: 400px){
+  :root {
+    --form-width: 100vw;
+    --logo-size: 0rem;
+    --logo-text: 0rem;
+  }
+  .login,
+  .signup {
+    font-size: 1em;
+  }
+  .bg-credits {
+    font-size: .25em;
+  }
+}
 
 
 /*for testing*/
