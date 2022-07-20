@@ -46,13 +46,19 @@
 <p>En fin, acá dejo un GIF mostrando el progreso:</p>
 <img src="./READMEmd/progress01.gif">
 
-<h2>Update 4</h2>
+<h2>Actualización 4</h2>
 <p>El formulario al fin progresa. Me costó encontrar la forma de lograr lo que tenía en mente. Los inputs ahora tienen placeholders, los estilicé un poco y luego me encontré con un problema: ¿cómo puedo hacer que el formulario muestre mensajes de error? Luego de testear un montón, finalmente encontré una forma de mostrar mensajes de error una vez que el usuario deja el input. De esta forma el usuario no será molestado con mensajes de error mientras escribe o incluso antes de empezarlos. Cuando el usuario deja un input (clickea fuera o presiona tab), el espacio cambiará a un "modo agresivo", comprobando lo ingresado mientras es escrito, para hacer más fácil encontrar y arreglar errores.</p>
 <p>Acá hay un GIF mostrando esto:</p>
 <img src="./READMEmd/progress02.gif">
 <p>También añadí un texto para los campos vacíos:</p>
 <img src="./READMEmd/progress03.gif">
 <p>Aún hay mucho trabajo por hacer. El formulario está muy lejos de estar terminado.</p>
+
+<h2>Actualización 5</h2>
+<p>Estuve trabajando en algo básico pero necesario.</p>
+<p>Primero, trabajé en el media query, ahora los formularios son usables incluso en una ventana muy angosta. También hice un poco de estilizado.</p>
+<p>Luego añadí el clásico "necesita/ya tiene una cuenta? Click aquí" para alternar entre formularios. Cuando el usuario clickea en éste, las dos imágenes pantalla completa cubrirán todo el viewport otra vez, luego se achicarán para revelar el otro formulario. Creo que se ve bastante bien.</p>
+<p>Aún hay mucho trabajo por hacer. Necesito usar RegEx para patrones, limitar el tipo de input (sólo números para el teléfono) y dedicarle atención a las contraseñas.</p>
 
 <h2></h2>
 <p></p>
@@ -91,6 +97,12 @@
 <p>I also added a little text to empty fields:</p>
 <img src="./READMEmd/progress03.gif">
 <p>There's still a LOT of work to do. This form is way far from finished.</p>
+
+<h2>Update 5</h2>
+<p>I've been working on something pretty basic but necessary.</p>
+<p>First, I've been working in the media query, now the forms are usable even in a very narrow window. Also a little of styling.</p>
+<p>Then I added the classic "need/have an accout? Click here" to swap between forms. When the user clicks on it, the two fulscreen images will cover the viewport again, then will shrink to reveal the other form. I think it looks pretty good.</p>
+<p>There's still a lot of work to do. I need to use RegEx for patterns, limit the input type (only numbers in the Phone field) and give some attention to the password.</p>
 
 <h2></h2>
 <p></p>
