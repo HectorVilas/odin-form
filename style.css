@@ -173,6 +173,7 @@ body {
 }
 
 
+
 /* - - - forms - - - */
 
 .form { /* divs */
@@ -213,6 +214,18 @@ body {
 form p {
   padding: .1rem var(--form-padding);
   margin-left: 0;
+}
+form p:last-of-type {
+  font-size: 1em;
+  color: var(--text-color-2);
+}
+form p:last-of-type::before {
+  padding-right: 1.25em;
+  content: "";
+  background: url(./media/images/input-status/undefined.png)
+              no-repeat center left;
+  background-size: 1em;
+  filter: grayscale(1) brightness(.5);
 }
 
 form button.signup {
@@ -265,6 +278,9 @@ input + span {
 input::placeholder {
   font-size: .9em;
   color: var(--text-color-4);
+}
+abbr {
+  color: var(--text-color-3);
 }
 
 /* status cues */
