@@ -60,6 +60,10 @@
 <p>Luego añadí el clásico "necesita/ya tiene una cuenta? Click aquí" para alternar entre formularios. Cuando el usuario clickea en éste, las dos imágenes pantalla completa cubrirán todo el viewport otra vez, luego se achicarán para revelar el otro formulario. Creo que se ve bastante bien.</p>
 <p>Aún hay mucho trabajo por hacer. Necesito usar RegEx para patrones, limitar el tipo de input (sólo números para el teléfono) y dedicarle atención a las contraseñas.</p>
 
+<h2>Actualización 6</h2>
+<p>Los campos requeridos ahora son marcados con asteriscos, usando abbr. Un texto chico lo anuncia, con un pequeño ícono (ícono reutilizado con filtro de saturación) para hacerlo más notorio.</p>
+<p>Ya que los campos no se borran luego de refrescar la página (al menos en Firefox), añadí unas pocas, simples líneas de código para verificar esos inputs. Si tienen algo escrito, comprobarán si lo ingresado es válido sin tener que clickear dentro y luego fuera del mismo, como en el comportamiento por defecto. Asumo que ésto también será útil para gente que use algún tipo de plugin para autocompletado.</p>
+
 <h2></h2>
 <p></p>
 
@@ -103,6 +107,11 @@
 <p>First, I've been working in the media query, now the forms are usable even in a very narrow window. Also a little of styling.</p>
 <p>Then I added the classic "need/have an accout? Click here" to swap between forms. When the user clicks on it, the two fulscreen images will cover the viewport again, then will shrink to reveal the other form. I think it looks pretty good.</p>
 <p>There's still a lot of work to do. I need to use RegEx for patterns, limit the input type (only numbers in the Phone field) and give some attention to the password.</p>
+
+
+<h2>Update 6</h2>
+<p>Required fields are now marked with an asterisk, using abbr. A small text announces it, with a little icon (reutilized icon with saturation filter) to make it more notorious.</p>
+<p>As the input fields doesn't get deleted after refreshing the page (at least on Firefox), I added a few, simple lines of code to check for those inputs. If there's something written, it will check if the input is valid without having to first click on it and then away, like in the default behaviour. I'm guessing it will also be useful for people using some kind of form autocompletion plugins.</p>
 
 <h2></h2>
 <p></p>
