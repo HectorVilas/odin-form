@@ -80,16 +80,9 @@ function swap(){
 };
 
 
-//this is for testing
-// btnLogin.removeEventListener("click", moveMenu);
-// btnSignUp.removeEventListener("click", moveMenu);
-// btnsDiv.style.marginBottom = "0";
-// btnsDiv.style.opacity = "0";
-// setTimeout(() => {
-//   btnsDiv.style.display = "none";
-// }, 1000);
-// bgLogin.classList.add("hide-side");
-// bgSignUp.classList.add("smaller-side");
-// menuSignUp.classList.remove("hidden");
-// loginSignUp.style.left = "0";
-// loginSignUp.style.right = "auto";
+//check input status if there's content after refresh
+inputs.forEach(input => {
+  if(input.value.length > 0){
+    input.classList.add("visited")
+  }
+});
