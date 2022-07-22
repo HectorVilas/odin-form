@@ -18,11 +18,17 @@ const
 //listeners
 btnLogin.addEventListener("click", moveMenu);
 btnSignUp.addEventListener("click", moveMenu);
+
 inputs.forEach(input => {
   input.addEventListener("focusout", () => {
     input.classList.add("visited")
-  })
+  });
+  if(input.type === "text" || input.type === "tel"){
+    // input.addEventListener("input", inputType);
+    input.onkeydown = inputType;
+  };
 });
+
 swapSide.forEach(a => {
   a.addEventListener("click", swap)
 });
@@ -79,6 +85,23 @@ function swap(){
   }, 2000);
 };
 
+//prevent writing numbers or chars when necessary
+function inputType(e) {
+  const nums = "0123456789";
+  const chars = "abcdefghijklmnopqrstuvwxyz";
+  
+  if(this.type === "text"){ //first and last name
+    if(nums.includes(e.key)){
+      return false;
+    }
+  } else { //phone number
+    if(chars.includes((e.key).toLowerCase())){
+      return false;
+    }
+  }
+};
+
+//on page load
 
 //check input status if there's content after refresh
 inputs.forEach(input => {
