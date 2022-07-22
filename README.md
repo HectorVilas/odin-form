@@ -64,6 +64,15 @@
 <p>Los campos requeridos ahora son marcados con asteriscos, usando abbr. Un texto chico lo anuncia, con un pequeño ícono (ícono reutilizado con filtro de saturación) para hacerlo más notorio.</p>
 <p>Ya que los campos no se borran luego de refrescar la página (al menos en Firefox), añadí unas pocas, simples líneas de código para verificar esos inputs. Si tienen algo escrito, comprobarán si lo ingresado es válido sin tener que clickear dentro y luego fuera del mismo, como en el comportamiento por defecto. Asumo que ésto también será útil para gente que use algún tipo de plugin para autocompletado.</p>
 
+<h2>Actualización 7</h2>
+<p>Hoy estuve horas intentando limitar el tipo de entrada en algunos campos. Los nombres no pueden contener números y los números no pueden contener letras. Mi primer idea fue añadir un event listener al input. Si se ingresa una letra en el campo de teléfono, no se escribirá, porque el valor del input será reemplazado por una copia sin el char no válido, pero ahora tengo dos problemas con esto:</p>
+<ul>
+  <li>el cursor se irá al final del texto ingresado</li>
+  <li>la pseudoclase :invalid no funcionará</li>
+</ul>
+<p>Ésto resultará en una pésima experiencia de usuario, así que busqué en internet y encontré otra forma de hacerlo: con <i>.onkeydown</i></p>
+<p>De esta forma sólo se requiere true o false, así que borré la última función por completo y empecé de cero con el nuevo método. Ahora el código es más corto y hace exactamente lo que quería: que la tecla presionada sea ignorada si en el campo es inválido.</p>
+
 <h2></h2>
 <p></p>
 
@@ -112,6 +121,15 @@
 <h2>Update 6</h2>
 <p>Required fields are now marked with an asterisk, using abbr. A small text announces it, with a little icon (reutilized icon with saturation filter) to make it more notorious.</p>
 <p>As the input fields doesn't get deleted after refreshing the page (at least on Firefox), I added a few, simple lines of code to check for those inputs. If there's something written, it will check if the input is valid without having to first click on it and then away, like in the default behaviour. I'm guessing it will also be useful for people using some kind of form autocompletion plugins.</p>
+
+<h2>Update 7</h2>
+<p>Today I spent hours trying to limit the input type in some fields. Names can't contain numbers and numbers can't contain letters. My first approach was adding an event listener to the input. If the input is a letter in the phone field, it won't be written, because the input value will be replaced for a copy without the invalid chars, but I had two problems with it:</p>
+<ul>
+  <li>the cursor will jump to the end of the string</li>
+  <li>the :invalid pseudoclass won't be triggered</li>
+</ul>
+<p>This will result in a lousy user experience, so I searched on the internet and found another way: the <i>.onkeydown</i></p>
+<p>This way it only requires a true or false, so I deleted the last function completely and started again with this new method. Now the code is shorter, and it does exactly what I wanted: the pressed key will be ignored if the field is invalid.</p>
 
 <h2></h2>
 <p></p>
