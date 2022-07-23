@@ -14,13 +14,5 @@ https://unsplash.com/@gioele_fazzeri_89
 
 ------------------------------------------
 
-arrows in wall image from:
-https://unsplash.com/photos/_E1PQXKUkMw
-
-by Possessed Photography:
-https://unsplash.com/@possessedphotography
-
-------------------------------------------
-
 odin-lined image, sign-up-form image and Norse-Bold font from The Odin Project:
 https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form
