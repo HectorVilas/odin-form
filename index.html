@@ -101,13 +101,22 @@
               <label for="password">Password <abbr title="required">*</abbr></label>
                 <input type="password" name="pass" id="password" minlength="8"
                 placeholder="••••••••" required>
-              <span></span>
+              <span class="span-pass">
+                <p>Your password must have:</p>
+                <ul>
+                  <li id="pass-chars">8 or more characters</li>
+                  <li id="pass-uc">at least one uppercase</li>
+                  <li id="pass-lc">at least one lowercase</li>
+                  <li id="pass-num">at least one number</li>
+                  <li id="pass-symbol">one symbol (e.g.: @)</li>
+                </ul>
+              </span>
             </li>
             <li>
               <label for="repeat-pass">Confirm password <abbr title="required">*</abbr></label>
                 <input type="password" id="repeat-pass"
                 placeholder="••••••••" required>
-              <span></span>
+              <span class="span-pass-confirm"></span>
             </li>
           </ul>
         </div>

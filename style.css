@@ -188,8 +188,10 @@ body {
   right: 0;
 }
 .bg-form-color {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
   background-color: #333;
-  padding-bottom: 1em;
 }
 
 /* text */
@@ -219,7 +221,7 @@ form p:last-of-type {
   font-size: 1em;
   color: var(--text-color-2);
 }
-form p:last-of-type::before {
+form > div > p:nth-of-type(2)::before {
   padding-right: 1.25em;
   content: "";
   background: url(./media/images/input-status/undefined.png)
@@ -242,6 +244,33 @@ form button.signup {
   color: var(--text-color-3);
 }
 
+/*password*/
+.span-pass {
+  height: 0%;
+  overflow: hidden;
+  transition: height 1s;
+}
+.span-pass > p {
+  padding: 0;
+  margin: 0;
+}
+.span-pass ul {
+  list-style: none;
+  padding-left: .25em;
+  font-size: 1em;
+}
+.span-pass ul li {
+  padding-left: 0;
+}
+.span-pass ul li::before {
+  content: "";
+  padding-right: 20px;
+  background-image: url(./media/images/input-status/bad.png);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: left;
+}
+
 /*width*/
 form {
   max-width: 1000px;
@@ -251,21 +280,20 @@ form {
 }
 
 /* fields */
-ul {
+form > div > ul {
   display: flex;
   flex-flow: row wrap;
   list-style: none;
-  padding: 0;
   padding: .1rem var(--form-padding);
   color: var(--text-color-1);
 }
-li {
+form > div > ul > li {
   display: flex;
   flex-direction: column;
   flex: 0 1 auto;
   width: calc(50% - var(--form-padding-li) );
   max-width: 300px;
-  height: 5rem;
+  min-height: 5rem;
   padding: var(--form-padding-li);
   padding-left: 0;
 }
@@ -319,10 +347,18 @@ input.visited:placeholder-shown {
   border-bottom: 4px solid yellow;
   background-image: url(./media/images/input-status/undefined.png);
 }
-input.visited:placeholder-shown + span::after {
+input.visited:placeholder-shown:not(input[type="password"]) + span::after {
   content: "This field is required.";
 }
+input[type="password"]:focus + span,
+input[type="password"].visited + span {
+  height: 100%;
+}
+input[type="password"]:valid + span {
+  height: 0%;
+}
 
+/*status message*/
 input[type="email"].visited:invalid + span::after {
   content: "Wrong format.";
 }
