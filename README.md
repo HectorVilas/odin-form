@@ -73,6 +73,20 @@
 <p>Ésto resultará en una pésima experiencia de usuario, así que busqué en internet y encontré otra forma de hacerlo: con <i>.onkeydown</i></p>
 <p>De esta forma sólo se requiere true o false, así que borré la última función por completo y empecé de cero con el nuevo método. Ahora el código es más corto y hace exactamente lo que quería: que la tecla presionada sea ignorada si en el campo es inválido.</p>
 
+<h2>Actualización 8</h2>
+<p>Esta vez estuve trabajando en el campo de contraseña, añadiendo un mensaje con los requisitos. Ésto funciona así:</p>
+<ul>
+  <li>cuando el usuario entra en el campo de contraseña, los requisitos serán mostrados</li>
+  <li>si el usuario sale del campo, aún se seguirá viendo</li>
+  <li>luego de que lo ingresado es válido, los requisitos se ocultarán</li>
+  <li>si velve al estado inválido, los requisitos se mostrarán otra vez</li>
+</ul>
+
+<img src="./READMEmd/progress04.gif">
+<h5>(El mensaje de conexión insegura ya ha sido arreglado, usé http en vez de https en el action del formulario)</h5>
+
+<p>Ésto es sólo algo visual. Ahora mismo el formulario sólo revisa el largo mínimo (minlength). El siguiente paso será finalmente añadir regEx para verificar esos requisitos.</p>
+
 <h2></h2>
 <p></p>
 
@@ -130,6 +144,21 @@
 </ul>
 <p>This will result in a lousy user experience, so I searched on the internet and found another way: the <i>.onkeydown</i></p>
 <p>This way it only requires a true or false, so I deleted the last function completely and started again with this new method. Now the code is shorter, and it does exactly what I wanted: the pressed key will be ignored if the field is invalid.</p>
+
+<h2>Update 8</h2>
+<p>This time I've been working in the password field, adding a message with the requirements. It works like this:</p>
+<ul>
+  <li>when user focus the password field, the requirements will show</li>
+  <li>if user unfocus, it will still show</li>
+  <li>after the input is valid, the requirements will hide</li>
+  <li>if it goes back to invalid, requirements will show again</li>
+</ul>
+
+<img src="./READMEmd/progress04.gif">
+<h5>(The insecure connection has been fixed, I was using http instead of https for the form action)</h5>
+
+<p>This is just something visual. Right now the form is just checking the minlength. The next step will be finally adding regEx to check for those requirements.</p>
+
 
 <h2></h2>
 <p></p>
