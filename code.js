@@ -109,3 +109,13 @@ inputs.forEach(input => {
     input.classList.add("visited")
   }
 });
+
+
+
+////////////////////autoreveal sign up for testing
+// bgLogin.style.transition = "1ms"
+// bgSignUp.style.transition = "1ms"
+// btnsDiv.style.display = "none";
+// bgLogin.classList.add("hide-side");
+// bgSignUp.classList.add("smaller-side");
+// menuSignUp.classList.remove("hidden");
