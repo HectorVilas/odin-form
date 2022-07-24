@@ -270,6 +270,9 @@ form button.signup {
   background-size: 70%;
   background-position: left;
 }
+.span-pass ul li.valid::before {
+  background-image: url(./media/images/input-status/good.png);
+}
 
 /*width*/
 form {
