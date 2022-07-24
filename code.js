@@ -11,7 +11,16 @@ const
   menuLogin = document.querySelector(".menu-login"),
   menuSignUp = document.querySelector(".menu-signup"),
   inputs = document.querySelectorAll("input"),
-  swapSide = document.querySelectorAll(".swap-side");
+  swapSide = document.querySelectorAll(".swap-side"),
+  //password related
+  inputPass = document.querySelectorAll(`.menu-signup input[type="password"]`)[0],
+  inputPassConfirm = document.querySelectorAll(`.menu-signup input[type="password"]`)[1],
+  passChars = document.querySelector("#pass-chars"),
+  passUc = document.querySelector("#pass-uc"),
+  passLc = document.querySelector("#pass-lc"),
+  passNum = document.querySelector("#pass-num"),
+  passSymbol = document.querySelector("#pass-symbol");
+
 
 
 
@@ -24,7 +33,6 @@ inputs.forEach(input => {
     input.classList.add("visited")
   });
   if(input.type === "text" || input.type === "tel"){
-    // input.addEventListener("input", inputType);
     input.onkeydown = inputType;
   };
 });
@@ -33,6 +41,7 @@ swapSide.forEach(a => {
   a.addEventListener("click", swap)
 });
 
+inputPass.addEventListener("input", validatePass);
 
 //functions
 
@@ -101,6 +110,29 @@ function inputType(e) {
   }
 };
 
+//check for requirements for password
+function validatePass(){
+  const value = this.value.split("");
+  //for validation
+  const nums = "0123456789";
+  const chars = "abcdefghijklmnopqrstuvwxyz";
+  const symbols = "@!°#$%&\"/\\=?¡'(){}[]~`";
+  //removes all valid status
+  [passChars, passUc, passLc, passNum, passSymbol].forEach(req => {
+    req.classList.remove("valid");
+  });
+  //validate length
+  if(value.length >= 8) passChars.classList.add("valid")
+  //validate chars  
+  for(const char of value){
+    if(chars.toUpperCase().includes(char)) passUc.classList.add("valid");
+    if(chars.includes(char)) passLc.classList.add("valid");
+    if(nums.includes(char)) passNum.classList.add("valid");
+    if(symbols.includes(char)) passSymbol.classList.add("valid");
+  };
+};
+
+
 //on page load
 
 //check input status if there's content after refresh
@@ -113,9 +145,9 @@ inputs.forEach(input => {
 
 
 ////////////////////autoreveal sign up for testing
-// bgLogin.style.transition = "1ms"
-// bgSignUp.style.transition = "1ms"
-// btnsDiv.style.display = "none";
-// bgLogin.classList.add("hide-side");
-// bgSignUp.classList.add("smaller-side");
-// menuSignUp.classList.remove("hidden");
+bgLogin.style.transition = "1ms"
+bgSignUp.style.transition = "1ms"
+btnsDiv.style.display = "none";
+bgLogin.classList.add("hide-side");
+bgSignUp.classList.add("smaller-side");
+menuSignUp.classList.remove("hidden");
