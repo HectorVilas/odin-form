@@ -87,8 +87,11 @@
 
 <p>Ésto es sólo algo visual. Ahora mismo el formulario sólo revisa el largo mínimo (minlength). El siguiente paso será finalmente añadir regEx para verificar esos requisitos.</p>
 
-<h2></h2>
-<p></p>
+<h2>Actualización 9</h2>
+<p>He escrito un poco de JavaScript para marcar como válido los requisitos en la lista bajo el campo de contraseña. Ahora éste comprobará cada caracter cuando se presione una tecla, así que si un requisito no es cumplido, se mostrará nuevamente como no válido.
+</p>
+<img src="./READMEmd/progress05.gif">
+<p>Debo aclarar que los requisitos se ocultan porque el largo mínimo (minlength) es cumplido, no porque todos los requisitos sean válidos. Éste será mi siguiente paso.</p>
 
 </details>
 
@@ -158,6 +161,11 @@
 <h5>(The insecure connection has been fixed, I was using http instead of https for the form action)</h5>
 
 <p>This is just something visual. Right now the form is just checking the minlength. The next step will be finally adding regEx to check for those requirements.</p>
+
+<h2>Update 9</h2>
+<p>I wrote a little of JavaScript to mark as valid the requirements in the list under the password field. Now it will check for each char on each keypress, so if a requirement is not met, it will show again as invalid.</p>
+<img src="./READMEmd/progress05.gif">
+<p>I should clarify, the requirements are hidden because the minlength is met, not because all the requirements are valid. This is my next step.</p>
 
 
 <h2></h2>
