@@ -88,13 +88,15 @@
             <li>
             <label for="e-mail">E-mail <abbr title="required">*</abbr></label>
               <input type="email" name="email" id="e-mail"
-              placeholder="username@example.com" required>
+              placeholder="username@example.com"
+              pattern="((\w+.|-)?\w+(.|-\w+)?[^-|.])@\w{3,}(-\w+)?\.\w{2,}(.\w{2,})?"
+              required>
               <span></span>
             </li>
             <li>
-              <label for="phone">Phone number <abbr title="required">*</abbr></label>
+              <label for="phone">Phone number</label>
               <input type="tel" name="phone" id="phone" minlength="8"
-              placeholder="12345678" required>
+              placeholder="12345678">
               <span></span>
             </li>
             <li>
