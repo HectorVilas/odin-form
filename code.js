@@ -43,6 +43,8 @@ swapSide.forEach(a => {
 
 inputPass.addEventListener("input", validatePass);
 
+inputPassConfirm.addEventListener("input", comparePass);
+
 //functions
 
 //moves the menu left or right to reveal the proper form, becoming a sidebar
@@ -112,6 +114,7 @@ function inputType(e) {
 
 //check for requirements for password
 function validatePass(){
+  comparePass(); //check valid status in confirmation
   const value = this.value.split("");
   //for validation
   const nums = "0123456789";
@@ -130,6 +133,14 @@ function validatePass(){
     if(nums.includes(char)) passNum.classList.add("valid");
     if(symbols.includes(char)) passSymbol.classList.add("valid");
   };
+};
+
+//check if pass and confirm are the same
+function comparePass(){
+  inputPass.value === inputPassConfirm.value
+  && inputPass.value.length > 0 ?
+  inputPassConfirm.classList.add("valid")
+  : inputPassConfirm.classList.remove("valid");
 };
 
 
