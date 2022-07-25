@@ -19,7 +19,8 @@ const
   passUc = document.querySelector("#pass-uc"),
   passLc = document.querySelector("#pass-lc"),
   passNum = document.querySelector("#pass-num"),
-  passSymbol = document.querySelector("#pass-symbol");
+  passSymbol = document.querySelector("#pass-symbol"),
+  btnSignUpForm = document.querySelector(".menu-signup button");
 
 
 
@@ -44,6 +45,12 @@ swapSide.forEach(a => {
 inputPass.addEventListener("input", validatePass);
 
 inputPassConfirm.addEventListener("input", comparePass);
+
+btnSignUpForm.addEventListener("click", (e) => {
+  if(!inputPassConfirm.className.includes("valid")){
+    e.preventDefault();
+  };
+});
 
 //functions
 
