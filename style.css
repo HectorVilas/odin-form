@@ -334,11 +334,13 @@ input:focus {
   border-bottom: 4px solid #777;
   outline: none;
 }
-input.visited:valid {
+input.visited:valid:not(#repeat-pass),
+#repeat-pass.visited.valid {
   border-bottom: 4px solid green;
   background-image: url(./media/images/input-status/good.png);
 }
-input.visited:invalid {
+input.visited:invalid,
+#repeat-pass.visited:not(.valid) {
   border-bottom: 4px solid orangered;
   background-image: url(./media/images/input-status/bad.png);
 }
@@ -351,8 +353,8 @@ input.visited:not([type="tel"]):placeholder-shown {
   background-image: url(./media/images/input-status/undefined.png);
 }
 input.visited[type="tel"]:placeholder-shown {
-  border-bottom: 4px solid #555;
-  background-image: none;
+  border-bottom: 4px solid #555 !important;
+  background-image: none !important;
 }
 input.visited:placeholder-shown:not([type="password"]):not([type="tel"]) + span::after {
   content: "This field is required.";
