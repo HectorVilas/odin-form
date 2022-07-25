@@ -102,7 +102,9 @@
             <li>
               <label for="password">Password <abbr title="required">*</abbr></label>
                 <input type="password" name="pass" id="password" minlength="8"
-                placeholder="••••••••" required>
+                placeholder="••••••••"
+                pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}"
+                required>
               <span class="span-pass">
                 <p>Your password must have:</p>
                 <ul>
@@ -116,8 +118,9 @@
             </li>
             <li>
               <label for="repeat-pass">Confirm password <abbr title="required">*</abbr></label>
-                <input type="password" id="repeat-pass"
-                placeholder="••••••••" required>
+                <input type="password" id="repeat-pass" placeholder="••••••••"
+                pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}"
+                required>
               <span class="span-pass-confirm"></span>
             </li>
           </ul>
