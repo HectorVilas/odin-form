@@ -20,7 +20,9 @@ const
   passLc = document.querySelector("#pass-lc"),
   passNum = document.querySelector("#pass-num"),
   passSymbol = document.querySelector("#pass-symbol"),
-  btnSignUpForm = document.querySelector(".menu-signup button");
+  btnSignUpForm = document.querySelector(".menu-signup button"),
+  //progress bar
+  progressBar = document.querySelector(".span-pass-confirm progress");
 
 
 
@@ -128,7 +130,8 @@ function validatePass(){
   const chars = "abcdefghijklmnopqrstuvwxyz";
   const symbols = "@!°#$%&\"/\\=?¡'(){}[]~`";
   //removes all valid status
-  [passChars, passUc, passLc, passNum, passSymbol].forEach(req => {
+  const checks = [passChars, passUc, passLc, passNum, passSymbol];
+  checks.forEach(req => {
     req.classList.remove("valid");
   });
   //validate length
@@ -140,6 +143,14 @@ function validatePass(){
     if(nums.includes(char)) passNum.classList.add("valid");
     if(symbols.includes(char)) passSymbol.classList.add("valid");
   };
+  //changing progress bar value depending length and requirements
+  let barValue = 0;
+  checks.forEach(ch => {
+    if(ch.className.includes("valid")) barValue++;
+  })
+  if(this.value.length > 11) barValue++;
+  if(this.value.length > 15) barValue++;
+  progressBar.value = barValue;
 };
 
 //check if pass and confirm are the same

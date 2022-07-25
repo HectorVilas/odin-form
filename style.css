@@ -388,6 +388,18 @@ input[type="tel"].visited:placeholder-shown + span::after {
   content: ""
 }
 
+/*progress bar*/
+.span-pass-confirm {
+  display: flex;
+  flex-direction: column;
+}
+.span-pass-confirm p {
+  padding: 0;
+  margin: 1em 0 .25em 0;
+}
+.span-pass-confirm progress {
+  width: 100%;
+}
 
 /* - - - general use - - - */
 
