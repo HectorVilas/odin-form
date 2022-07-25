@@ -346,11 +346,15 @@ input:placeholder-shown {
   border-bottom: 4px solid #555;
   background-image: none;
 }
-input.visited:placeholder-shown {
+input.visited:not([type="tel"]):placeholder-shown {
   border-bottom: 4px solid yellow;
   background-image: url(./media/images/input-status/undefined.png);
 }
-input.visited:placeholder-shown:not(input[type="password"]) + span::after {
+input.visited[type="tel"]:placeholder-shown {
+  border-bottom: 4px solid #555;
+  background-image: none;
+}
+input.visited:placeholder-shown:not([type="password"]):not([type="tel"]) + span::after {
   content: "This field is required.";
 }
 input[type="password"]:focus + span,
@@ -379,7 +383,7 @@ input[type="tel"].visited:valid + span::after{
   content: none;
 }
 input[type="tel"].visited:placeholder-shown + span::after {
-  content: "This field is required."
+  content: ""
 }
 
 
