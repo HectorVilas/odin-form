@@ -329,10 +329,12 @@ input {
   color: var(--text-color-1);
   font-family: var(--font-2);
 }
-input:focus {
+input:focus,
+input:hover {
   background-color: #555;
   border-bottom: 4px solid #777;
   outline: none;
+  box-shadow: 0 0 .5rem white;
 }
 input.visited:valid:not(#repeat-pass),
 #repeat-pass.visited.valid {
