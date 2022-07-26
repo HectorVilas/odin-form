@@ -93,6 +93,17 @@
 <img src="./READMEmd/progress05.gif">
 <p>Debo aclarar que los requisitos se ocultan porque el largo mínimo (minlength) es cumplido, no porque todos los requisitos sean válidos. Éste será mi siguiente paso.</p>
 
+<h2>Actualización 10</h2>
+<p>Escribí un poco de código para la confirmación de contraseñ. Cuando el usuario escribe en éste o el otro campo de contraseña, éste cambiará el estado a válido o inválido por cada tecla presionada.</p>
+<img src="./READMEmd/progress06.gif">
+<p>Para desafiarme a mí mismo un poco, hice que el campo de número telefónico sea opciona. Ésto requirió jugar un poco con el CSS para hacer que deje de mostrar el mensaje global de "campo requerido", ambién hice que no muestre ningún estado si el campo se encuentra vacío. Logré hacer ésto sólo con selectores avanzados de CSS, fue desafiante y entretenido, esos métodos son muy poderosos.</p>
+<p>También aprendí sobre regEx, fue muy difícil, pero logré escribir un patrón para emails por mi cuenta. Lo puse a prueba en regex101.com con un listado de emails en formatos válidos e inválidos para probar, y el resultado fue satisfactorio.</p>
+<p>Luego la contraseña, y tengo una confesión: copié el patrón de ihateregex.io/expr/password. Lo intenté por mi cuenta, pero sin éxito. Algunos requisitos funcionaban, otros no. Luego buscando más información, encontré el patrón perfecto con los mismos requisitos que el mío. El dev que nunca haya copiado y pegado código ajeno que tire la primer piedra, jej. Prometo que voy a dedicarle más tiempo al regex hasta agarrarle la mano.</p>
+<p>Otra adición fue una barra de progreso para mostrar qué tan segura es la contraseña. Es sólo algo estético, no sé si esos valores realmente hacen que una contraseña sea más segura. La barra añade un punto por cada requisito cumplido, y otros dos puntos por largo extra.</p>
+<img src="./READMEmd/progress07.gif">
+<p>Y, finalmente, usé .preventDefault() en el botón de submit. Si el "confirmar contraseña" no tiene la clase "valid" (válido), no se enviará el formulario. El resto de los campos ya tienen un patrón y el atributo required (requerido), así que no sería necesario comprobar éstos. Creo que ésto es suficiente desde el lado del frontend del formulario, para no enviar basura al backend.</p>
+<p>Lo último que añadí fue un pequeño brillo en los campos resaltados y activos. Fue una recomendación de un amigo, y se ve bien.</p>
+
 </details>
 
 <!--------------------------->
@@ -166,6 +177,19 @@
 <p>I wrote a little of JavaScript to mark as valid the requirements in the list under the password field. Now it will check for each char on each keypress, so if a requirement is not met, it will show again as invalid.</p>
 <img src="./READMEmd/progress05.gif">
 <p>I should clarify, the requirements are hidden because the minlength is met, not because all the requirements are valid. This is my next step.</p>
+
+
+<h2>Update 10</h2>
+<p>I wrote a little code for the "confirm password". When the user writes in this one or the first password field, it will change state to valid or invalid on each keypress.</p>
+<img src="./READMEmd/progress06.gif">
+<p>To challenge myself a little, I made the "phone number" field optional. It required a little fiddling with CSS to make it stop showing the global "required field" message, also made it to not show any status if the field is empty. I managed to do it with only advanced CSS selectors, it was challenging but fun, those methods are powerful.</p>
+<p>I also learned about regEx, it was really hard, but managed to write the pattern for emails by myself. I tried it in regex101.com with a list of valid and invalid email formats for testing, and the result was satisfactory.</p>
+<p>Then the password, and I have a confession: I just took the pattern from ihateregex.io/expr/password. I tried myself, but without success. Some checks worked, some didn't. Then looking for more info, found this perfect pattern with the same requirements as mine. The dev that never copypasted code can throw the first rock, heh. I promise I'll spend more time trying to get a grasp of regEx.</p>
+<p>Another adition was a progress bar to show password strength. It's just for decoration, I don't know if those values really makes the password stronger. The bar will add one point for each requirement met, and two extra points for extra length.</p>
+<img src="./READMEmd/progress07.gif">
+<p>And finally, I used .preventDefault() in the submit button. If the "confirm password" doesn't have a "valid" class, it won't submit. The rest of the fields have a pattern and a required attribute, so it was unnecesary there. I think this is enough for the frontend side of the form, to not send garbage to the backend.</p>
+<p>The last thing I added was a little glow in the focused and active fields. It was a recomendation from a friend, and it looks good.</p>
+
 
 
 <h2></h2>
