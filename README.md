@@ -104,6 +104,13 @@
 <p>Y, finalmente, usé .preventDefault() en el botón de submit. Si el "confirmar contraseña" no tiene la clase "valid" (válido), no se enviará el formulario. El resto de los campos ya tienen un patrón y el atributo required (requerido), así que no sería necesario comprobar éstos. Creo que ésto es suficiente desde el lado del frontend del formulario, para no enviar basura al backend.</p>
 <p>Lo último que añadí fue un pequeño brillo en los campos resaltados y activos. Fue una recomendación de un amigo, y se ve bien.</p>
 
+<h1>Pensamientos finales</h1>
+<p>He procrastinado la sección de formularios del curso, incluso he empezado un proyecto personal (un juego de Solitario, divertido proyecto que me llevó un mes para acabar, <a href="https://hectorvilas.github.io/solitaire/">click acá para jugarlo</a>), sólo porque los formularios me parecían aburridos. Bueno, lo eran, mucho, pero luego de progresar, los encontraba caeda vez más interesantes.</p>
+<p>Luego empecé con este proyecto de práctica, pensé que iba a ser fácil, pues no, sí que estaba equivocado.</p>
+<p>Ahora que finalmente acabé el proyecto, puedo ver cuánto trabajo requiere incluso el formulario más simple. Ahora tengo respeto por los formularios, y desprecio a esos que hacen un mal trabajo, creando una mala experiencia para el usuario, por no respetar los formularios.</p>
+<p>Este proyecto fue divertido, y aprendí un montón. No puedo esperar para ver la siguiente parte del curso.</p>
+<p>¡Los veo en mi siguiente proyecto!</p>
+
 </details>
 
 <!--------------------------->
@@ -192,7 +199,11 @@
 
 
 
-<h2></h2>
-<p></p>
+<h1>Final thoughts</h1>
+<p>I've procrastinated the forms section of the course, I've even started a personal project (a solitaire game, fun project that took me a month to finish, <a href="https://hectorvilas.github.io/solitaire/">click here to play</a>), just because I found forms boring. Well, it was, very, but after progressing, It was getting better and better.</p>
+<p>Then I started with this practice project, I thought it was going to be a piece of cake, but oh boy, I was wrong.</p>
+<p>Now that I finally finished the project, I can see how much work it requires to make even the simplest form. Now I have respect for forms, and despise those who make a lousy form with bad user experience for not respecting it.</p>
+<p>This project was fun, and I learned a lot. I can't wait to see the next part of the course.</p>
+<p>See ya in my next project!</p>
 
 </details>
