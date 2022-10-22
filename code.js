@@ -102,7 +102,7 @@ function swap(){
     };
     hidden.classList.add("smaller-side")
     smaller.classList.add("hide-side")
-  }, 2000);
+  }, 1000);
 };
 
 //prevent writing numbers or chars when necessary
